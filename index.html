@@ -1,13 +1,171 @@
 <!doctype html>
-<html lang="en">
+<html lang="el">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Google AI Studio App</title>
+    <title>Ταβέρνα Ο Γιώργος | Αυθεντική Ελληνική Φιλοξενία από το 1990</title>
+    <meta name="description" content="Αυθεντική ελληνική κουζίνα, σπιτικές συνταγές και ζεστή φιλοξενία στην καρδιά του χωριού από το 1990." />
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
+    <header class="site-header" id="top">
+      <div class="container nav-wrap">
+        <a href="#home" class="brand">
+          <span class="brand-title">Ταβέρνα Ο Γιώργος</span>
+          <span class="brand-sub">Από το 1990</span>
+        </a>
+
+        <button class="menu-toggle" id="menu-toggle" aria-label="Άνοιγμα μενού" aria-expanded="false">☰</button>
+
+        <nav class="nav" id="main-nav">
+          <a href="#home">Αρχική</a>
+          <a href="#about">Η Ταβέρνα</a>
+          <a href="#menu">Μενού</a>
+          <a href="#gallery">Γκαλερί</a>
+          <a href="#contact">Επικοινωνία</a>
+          <a class="btn btn-solid" href="tel:+302101234567">Κράτηση</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" id="home">
+        <img src="https://picsum.photos/seed/tavern-hero/1920/1080" alt="Tavern Atmosphere" />
+        <div class="overlay"></div>
+        <div class="container hero-content">
+          <span class="pill">Από το 1990</span>
+          <h1>Αυθεντικές Γεύσεις <span>της Ελλάδας</span></h1>
+          <p>Παραδοσιακή ελληνική κουζίνα, σπιτικές συνταγές και ζεστή φιλοξενία στην καρδιά του χωριού μας.</p>
+          <div class="cta-row">
+            <a href="#menu" class="btn btn-burgundy">Δείτε το Μενού</a>
+            <a href="tel:+302101234567" class="btn btn-outline">Κάντε Κράτηση</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section white" id="about">
+        <div class="container two-col">
+          <div>
+            <img class="rounded" src="https://picsum.photos/seed/tavern-story/800/1000" alt="Our Story" />
+          </div>
+          <div>
+            <p class="eyebrow">Η Ιστορία μας</p>
+            <h2>Μια οικογενειακή παράδοση που κρατάει από το 1990</h2>
+            <p>Ξεκινήσαμε το 1990 με ένα όραμα: να προσφέρουμε το πιο αγνό και νόστιμο φαγητό στους φίλους και τους γείτονές μας.</p>
+            <p>Χρησιμοποιούμε μόνο φρέσκα, τοπικά υλικά και ακολουθούμε πιστά τις παραδοσιακές συνταγές που πέρασαν από γενιά σε γενιά.</p>
+            <div class="stats">
+              <div><strong>30+</strong><span>Χρόνια Εμπειρίας</span></div>
+              <div><strong>100%</strong><span>Αγνά Υλικά</span></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section beige" id="menu">
+        <div class="container">
+          <div class="center intro">
+            <p class="eyebrow">Προτάσεις μας</p>
+            <h2>Οι Σπεσιαλιτέ μας</h2>
+          </div>
+          <div class="menu-controls">
+            <div class="chips" id="category-filters">
+              <button data-category="all" class="active">Όλα</button>
+              <button data-category="orektika">Ορεκτικά</button>
+              <button data-category="salates">Σαλάτες</button>
+              <button data-category="kreatika">Κρεατικά & Σχάρας</button>
+              <button data-category="mageirefta">Μαγειρευτά</button>
+              <button data-category="thalassina">Θαλασσινά</button>
+            </div>
+            <input id="menu-search" type="search" placeholder="Αναζήτηση πιάτου..." />
+          </div>
+          <div class="cards" id="menu-items">
+            <article class="card" data-category="orektika" data-search="Τζατζίκι Χειροποίητο Με στραγγιστό γιαούρτι, φρέσκο αγγούρι και σκόρδο.">
+              <img src="https://picsum.photos/seed/tzatziki/400/300" alt="Τζατζίκι Χειροποίητο" />
+              <div class="card-body"><h3>Τζατζίκι Χειροποίητο</h3><p>Με στραγγιστό γιαούρτι, φρέσκο αγγούρι και σκόρδο.</p><strong>€4.50</strong></div>
+            </article>
+            <article class="card" data-category="orektika" data-search="Φέτα Ψητή Με ντομάτα, πιπεριά και μπούκοβο σε αλουμινόχαρτο.">
+              <img src="https://picsum.photos/seed/feta/400/300" alt="Φέτα Ψητή" />
+              <div class="card-body"><h3>Φέτα Ψητή</h3><p>Με ντομάτα, πιπεριά και μπούκοβο σε αλουμινόχαρτο.</p><strong>€6.00</strong></div>
+            </article>
+            <article class="card" data-category="salates" data-search="Χωριάτικη Σαλάτα Ντομάτα, αγγούρι, κρεμμύδι, ελιές, φέτα και παρθένο ελαιόλαδο.">
+              <img src="https://picsum.photos/seed/greek-salad/400/300" alt="Χωριάτικη Σαλάτα" />
+              <div class="card-body"><h3>Χωριάτικη Σαλάτα</h3><p>Ντομάτα, αγγούρι, κρεμμύδι, ελιές, φέτα και παρθένο ελαιόλαδο.</p><strong>€8.50</strong></div>
+            </article>
+            <article class="card" data-category="kreatika" data-search="Παϊδάκια Αρνίσια Το κιλό, ψημένα στα κάρβουνα με αλάτι και ρίγανη.">
+              <img src="https://picsum.photos/seed/lamb-chops/400/300" alt="Παϊδάκια Αρνίσια" />
+              <div class="card-body"><h3>Παϊδάκια Αρνίσια</h3><p>Το κιλό, ψημένα στα κάρβουνα με αλάτι και ρίγανη.</p><strong>€32.00</strong></div>
+            </article>
+            <article class="card" data-category="mageirefta" data-search="Μουσακάς Παραδοσιακός Με φρέσκο μοσχαρίσιο κιμά, μελιτζάνες και πλούσια μπεσαμέλ.">
+              <img src="https://picsum.photos/seed/moussaka/400/300" alt="Μουσακάς Παραδοσιακός" />
+              <div class="card-body"><h3>Μουσακάς Παραδοσιακός</h3><p>Με φρέσκο μοσχαρίσιο κιμά, μελιτζάνες και πλούσια μπεσαμέλ.</p><strong>€12.00</strong></div>
+            </article>
+            <article class="card" data-category="thalassina" data-search="Χταπόδι Ψητό Στα κάρβουνα με λαδολέμονο και ρίγανη.">
+              <img src="https://picsum.photos/seed/octopus/400/300" alt="Χταπόδι Ψητό" />
+              <div class="card-body"><h3>Χταπόδι Ψητό</h3><p>Στα κάρβουνα με λαδολέμονο και ρίγανη.</p><strong>€14.50</strong></div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section white" id="gallery">
+        <div class="container">
+          <div class="center intro">
+            <p class="eyebrow">Φωτογραφίες</p>
+            <h2>Στιγμές από την Ταβέρνα μας</h2>
+          </div>
+          <div class="gallery-grid" id="gallery-grid">
+            <img src="https://picsum.photos/seed/tavern1/800/600" alt="Εσωτερικός χώρος ταβέρνας" />
+            <img src="https://picsum.photos/seed/food1/800/600" alt="Παραδοσιακά πιάτα" />
+            <img src="https://picsum.photos/seed/tavern2/800/600" alt="Η αυλή μας το καλοκαίρι" />
+            <img src="https://picsum.photos/seed/food2/800/600" alt="Ψητά στα κάρβουνα" />
+            <img src="https://picsum.photos/seed/tavern3/800/600" alt="Η ομάδα μας" />
+            <img src="https://picsum.photos/seed/food3/800/600" alt="Φρέσκες σαλάτες" />
+          </div>
+        </div>
+      </section>
+
+      <section class="section beige" id="contact">
+        <div class="container two-col contact">
+          <div>
+            <p class="eyebrow">Επικοινωνία</p>
+            <h2>Επικοινωνία & Κρατήσεις</h2>
+            <p>Κεντρική Πλατεία, Χωριό, Ελλάδα</p>
+            <p><a href="tel:+302101234567">+30 210 1234567</a></p>
+            <p><a href="mailto:info@taverna-giorgos.gr">info@taverna-giorgos.gr</a></p>
+            <p>Δευτέρα - Παρασκευή: 12:00 - 00:00<br />Σάββατο - Κυριακή: 11:00 - 01:00</p>
+          </div>
+          <form id="contact-form" class="contact-form">
+            <input type="text" placeholder="Ονοματεπώνυμο" required />
+            <input type="email" placeholder="Email" required />
+            <select>
+              <option>Κράτηση Τραπεζιού</option>
+              <option>Ερώτηση για το Μενού</option>
+              <option>Εκδήλωση / Γιορτή</option>
+              <option>Άλλο</option>
+            </select>
+            <textarea rows="5" placeholder="Μήνυμα" required></textarea>
+            <button class="btn btn-solid" type="submit">Αποστολή Μηνύματος</button>
+            <p id="form-status" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <h3>Ταβέρνα Ο Γιώργος</h3>
+          <p>Αυθεντική Ελληνική Φιλοξενία από το 1990.</p>
+        </div>
+        <div>
+          <h4>Γρήγοροι Σύνδεσμοι</h4>
+          <p><a href="#home">Αρχική</a> · <a href="#about">Η Ταβέρνα</a> · <a href="#menu">Μενού</a> · <a href="#gallery">Γκαλερί</a> · <a href="#contact">Επικοινωνία</a></p>
+        </div>
+      </div>
+      <div class="container footer-bottom">© <span id="year"></span> Ταβέρνα Ο Γιώργος. Με επιφύλαξη παντός δικαιώματος.</div>
+    </footer>
+
+    <script src="./scripts.js"></script>
   </body>
 </html>
-
